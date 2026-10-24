@@ -1,0 +1,64 @@
+---
+import { work } from "../../../cv.json";
+import Section from "../Section.astro";
+
+const MONTHS = [
+  "ene",
+  "feb",
+  "mar",
+  "abr",
+  "may",
+  "jun",
+  "jul",
+  "ago",
+  "sep",
+  "oct",
+  "nov",
+  "dic",
+];
+
+function formatDate(date: string | null) {
+  if (!date) return "Actual";
+  const d = new Date(date);
+  return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+}
+---
+
+<Section title="Experiencia laboral">
+  <ul class="flex flex-col gap-8">
+    {
+      work.map(({ name, startDate, endDate,  summary, url }) => (
+        <li>
+          <article>
+            <header class="mb-1 flex items-start justify-between">
+              <div>
+                <h3 class="font-medium text-neutral-900">
+                  {url ? (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sky-700 hover:underline"
+                    >
+                      {name}
+                    </a>
+                  ) : (
+                    name
+                  )}
+                </h3>
+              </div>
+              <time class="font-mono text-xs whitespace-nowrap text-neutral-500">
+                {formatDate(startDate)} - {formatDate(endDate)}
+              </time>
+            </header>
+            <footer>
+              <p class="font-mono text-sm theme-text leading-6 text-neutral-600">
+                {summary}
+              </p>
+            </footer>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

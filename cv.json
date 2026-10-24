@@ -1,0 +1,116 @@
+{
+  "basics": {
+    "name": "Franklin Villanueva",
+    "label": "Frontend Developer",
+    "image": "",
+    "email": "franklinevillanueva4@gmail.com",
+    "phone": "+503 0000-0000",
+    "url": "https://fran-web-dev.github.io",
+    "summary": "Desarrollador Frontend apasionado por crear interfaces limpias, rápidas y accesibles. Trabajo con React, TypeScript, Astro y Tailwind CSS. Vivo en El Salvador.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "San Salvador",
+      "countryCode": "SV",
+      "region": "El Salvador"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "franklin-villanueva",
+        "url": "https://linkedin.com/in/franklin-villanueva"
+      },
+      {
+        "network": "X",
+        "username": "Fran_web_dev",
+        "url": "https://x.com/Fran_web_dev"
+      },
+      {
+        "network": "GitHub",
+        "username": "Fran-web-dev",
+        "url": "https://github.com/Fran-web-dev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Hoppscotch",
+      "url": "https://github.com/hoppscotch/hoppscotch/issues/5754",
+      "startDate": "01-01-2025",
+      "endDate": null,
+      "summary": "Contribucion a issue frontend de codigo abierto enfocado en mejorar la seleccion de sincronizacion del estado  d   y  ld"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "ITR",
+      "url": "",
+      "area": "Tecnico en Desarrollo De Software",
+      "studyType": "Grado",
+      "startDate": "01/01/2025",
+      "endDate": "09/10/2027",
+      "score": "100",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    { "name": "HTML", "level": "", "keywords": [] },
+    { "name": "CSS", "level": "", "keywords": [] },
+    { "name": "JavaScript", "level": "", "keywords": [] },
+    { "name": "TypeScript", "level": "", "keywords": [] },
+    { "name": "React", "level": "", "keywords": [] },
+    { "name": "Astro", "level": "", "keywords": [] },
+    { "name": "Tailwind CSS", "level": "", "keywords": [] },
+    { "name": "Node.js", "level": "", "keywords": [] },
+    { "name": "Git", "level": "", "keywords": [] },
+    { "name": "GitHub", "level": "", "keywords": [] }
+  ],
+  "languages": [
+    { "language": "Español", "fluency": "Nativo" },
+    { "language": "Inglés", "fluency": "Intermedio" }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "JobTracker",
+      "img":"../public/login.png",
+      "isActive": true,
+      "description": "JobTracker es una aplicación web para gestionar flujos de trabajo de reclutamiento. Ayuda a los equipos a realizar un seguimiento de puestos, candidatos, solicitudes, entrevistas, procesos de contratación e informes desde una interfaz moderna basada en React.",
+      "highlights": ["React", "JavaScript","Tailwind CSS", "MongoDB", "Prisma ORM"],
+      "url": "https://talentflowatss.netlify.app/login",
+      "github": "https://github.com/Fran-web-dev/jobTracker"
+    },
+    {
+      "name": "List Of Books",
+      "img":"../public/ListOfBooks.png",
+      "isActive": false,
+      "description": "📚 Landing page inspirada en el iPhone 15 Pro, enfocada en crear una experiencia visual moderna y adaptable (responsive). Desarrollé la interfaz desde cero, trabajando en la estructura, el diseño y la presentación del producto.",
+      "highlights": ["React", "JavaScript", "Tailwind CSS", "Jest JS"],
+      "url": "https://listsofbooks.netlify.app/",
+      "github": "https://github.com/Fran-web-dev/ListOfBooks"
+    },
+    {
+      "name": "Blog personal",
+      "img":"../public/Blog.png",
+      "isActive": true,
+      "description": "Blog con editor Markdown, categorías, comentarios y corrección ortográfica integrada.",
+      "highlights": ["React", "Vite", "TypeScript"],
+      "url": "https://bitacorablogpersonal.netlify.app/#/",
+      "github": "https://github.com/Fran-web-dev/Blog"
+    },
+    {
+      "name": "Iphone15",
+      "img":"../public/Iphone15.png",
+      "isActive": false,
+      "description": "Landing Page de Iphone 15 Pro, enfocada en crear una experiencia visual moderna y responsiva. Construí la interfaz desde cero, trabajando en la estructura, diseño y presentación del producto.",
+      "highlights": ["React", "JavaScript","Tailwind CSS"],
+      "url": "https://iphone15p.netlify.app/",
+      "github": "https://github.com/Fran-web-dev/Iphone-15-pro"
+    }
+  ]
+}

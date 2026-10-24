@@ -1,0 +1,106 @@
+---
+import { basics } from "../../../cv.json";
+import Section from "../Section.astro";
+import Mail from "../../icons/Mail.astro";
+import Phone from "../../icons/Phone.astro";
+import X from "../../icons/X.astro";
+import LinkedIn from "../../icons/LinkedIn.astro";
+import GitHub from "../../icons/GitHub.astro";
+import WorldMap from "../../icons/WorldMap.astro";
+
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region } = location;
+
+const SOCIAL_ICONS: Record<string, any> = {
+  GitHub,
+  LinkedIn,
+  X,
+};
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+---
+
+<Section>
+  <div class="flex flex-row items-center justify-between gap-4">
+    <div class="flex flex-col gap-2 pr-8">
+      <h1 class="text-3xl font-bold text">
+       Hola, Soy <span class="gradient-text text-2xl">{name}</span> 🤚
+      </h1>
+      <h2 class="font-mono text-lg font-medium text-balance theme-text">
+        {label}
+      </h2>
+      <span class="flex items-center gap-1 font-mono text-xs tracking-tight theme-text">
+        <WorldMap />
+        {city}, {region}
+      </span>
+      <footer class="mt-1 hidden font-mono text-xs text-neutral-500 print:block">
+        {printInfo}
+      </footer>
+      <footer class="mt-1 flex gap-1 print:hidden">
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`tel:${phone}`}
+              title={`Llamar por teléfono a ${name} al número ${phone}`}
+              class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+            >
+              <Phone />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
+            if (!Icon) return null;
+            return (
+              <a
+                href={url}
+                title={`Visitar el perfil de ${name} en ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+              >
+                <Icon />
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+    <figure class="shrink-0">
+      {
+        image ? (
+          <img
+            src={image}
+            alt={name}
+            class="aspect-square w-28 rounded-2xl object-cover border-2 border-neutral-200 dark:border-white"
+          />
+        ) : (
+          <div class="flex aspect-square w-28 items-center justify-center rounded-2xl bg-neutral-800 text-4xl font-bold text-white border-2 border-neutral-200 dark:border-white">
+            {name
+              .split(" ")
+              .map((n) => n[0])
+              .slice(0, 2)
+              .join("")}
+          </div>
+        )
+      }
+    </figure>
+  </div>
+</Section>

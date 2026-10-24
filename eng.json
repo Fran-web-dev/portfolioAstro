@@ -1,0 +1,123 @@
+{
+  "basics": {
+    "name": "Franklin Villanueva",
+    "label": "Frontend Developer",
+    "image": "",
+    "email": "franklinevillanueva4@gmail.com",
+    "phone": "+503 0000-0000",
+    "url": "https://fran-web-dev.github.io",
+    "summary": "Fronted Developer passionate about creating clean, fast, and accessible interfaces. I work with React, TypeScript, Astro and Tailwind CSS. I live in El Salvador.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "San Salvador",
+      "countryCode": "SV",
+      "region": "El Salvador"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "franklin-villanueva",
+        "url": "https://linkedin.com/in/franklin-villanueva"
+      },
+      {
+        "network": "X",
+        "username": "Fran_web_dev",
+        "url": "https://x.com/Fran_web_dev"
+      },
+      {
+        "network": "GitHub",
+        "username": "Fran-web-dev",
+        "url": "https://github.com/Fran-web-dev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelance",
+      "position": "Frontend Developer",
+      "url": "https://github.com/Fran-web-dev",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "summary": "Desarrollo de aplicaciones web para clientes: sistemas de facturación electrónica (DTE) para El Salvador, blogs, herramientas internas y dashboards. Enfoque en React, TypeScript y buenas prácticas.",
+      "highlights": ["React", "TypeScript"]
+    },
+    {
+      "name": "Tu empresa anterior",
+      "position": "Tu puesto",
+      "url": "",
+      "startDate": "2021-01-01",
+      "endDate": "2023-01-01",
+      "summary": "Describe aquí tu experiencia laboral anterior: qué hiciste, logros medibles y tecnologías que usaste.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "ITR",
+      "url": "",
+      "area": "Technical Software Developer",
+      "studyType": "Grado",
+      "startDate": "01/01/2025-01-01",
+      "endDate": "09/10/2027",
+      "score": "100",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    { "name": "HTML", "level": "", "keywords": [] },
+    { "name": "CSS", "level": "", "keywords": [] },
+    { "name": "JavaScript", "level": "", "keywords": [] },
+    { "name": "TypeScript", "level": "", "keywords": [] },
+    { "name": "React", "level": "", "keywords": [] },
+    { "name": "Astro", "level": "", "keywords": [] },
+    { "name": "Tailwind CSS", "level": "", "keywords": [] },
+    { "name": "Node.js", "level": "", "keywords": [] },
+    { "name": "Git", "level": "", "keywords": [] },
+    { "name": "GitHub", "level": "", "keywords": [] }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native" },
+    { "language": "English", "fluency": "Intermediate" }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "JobTracker",
+      "isActive": true,
+      "description": "JobTracker is a web application for managing recruitment workflows. It helps teams track jobs, candidates, applications, interviews, hiring pipelines, and reports from a modern React interface.",
+      "highlights": ["React", "JavaScript","Tailwind CSS", "MongoDB", "Prisma ORM"],
+      "url": "https://talentflowatss.netlify.app/login",
+      "github": "https://github.com/Fran-web-dev/jobTracker"
+    },
+    {
+      "name": "List Of Books",
+      "isActive": false,
+      "description": "📚 Interactive reading list: filter books by genre, drag them to your list, state syncs across tabs. Built with React + Vite + Tailwind CSS.",
+      "highlights": ["React", "JavaScript", "Tailwind CSS", "Jest JS"],
+      "url": "https://listsofbooks.netlify.app/",
+      "github": "https://github.com/Fran-web-dev/ListOfBooks"
+    },
+    {
+      "name": "Blog personal",
+      "isActive": true,
+      "description": "Blog con editor Markdown, categorías, comentarios y corrección ortográfica integrada.",
+      "highlights": ["React", "Vite", "TypeScript"],
+      "url": "https://bitacorablogpersonal.netlify.app/#/",
+      "github": "https://github.com/Fran-web-dev/Blog"
+    },
+    {
+      "name": "Iphone15",
+      "isActive": false,
+      "description": "Landing page inspired by the iPhone 15 Pro, focused on creating a modern and responsive visual experience. I built the interface from scratch, working on the structure, design, and product presentation.",
+      "highlights": ["React", "JavaScript","Tailwind CSS"],
+      "url": "https://iphone15p.netlify.app/",
+      "github": "https://github.com/Fran-web-dev/Iphone-15-pro"
+    }
+  ]
+}

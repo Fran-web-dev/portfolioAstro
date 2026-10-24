@@ -1,0 +1,26 @@
+---
+import { basics } from "../../cv.json";
+const { name } = basics;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="mt-12 border-t border-neutral-200 dark:border-gray-700">
+  <div class="mx-auto max-w-2xl px-16 py-8 max-md:px-8 max-sm:px-4">
+    <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <p class="font-mono text-sm text-neutral-600 dark:text-gray-400">
+        © {currentYear} {name}. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-4 font-mono text-sm text-neutral-600 dark:text-gray-400">
+        <a href="#" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          GitHub
+        </a>
+        <a href="#" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          LinkedIn
+        </a>
+        <a href="#" class="hover:text-neutral-900 dark:hover:text-white transition-colors">
+          Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section
+  class="mx-auto mb-6 w-full theme-card max-w-2xl rounded-xl border border-neutral-200 bg-white/80 p-6 backdrop-blur-sm print:border-0 print:bg-white print:p-0"
+>
+  {
+    title && (
+      <h2 class="mb-2 text-2xl theme-text leading-8 font-bold text-neutral-900">
+        {title}
+      </h2>
+    )
+  }
+  <slot />
+</section>

@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import About from "../components/sections/About.astro";
+import Experience from "../components/sections/Experience.astro";
+import Education from "../components/sections/Education.astro";
+import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
+import KeyboardManager from "../components/KeyboardManager";
+import { ThemeApp } from "../components/ThemeApp"
+import { Wrapper } from "../components/Wrapper"
+
+import { basics } from "../../cv.json";
+
+
+const { name, label, profiles } = basics;
+---
+
+<Layout title={`Portafolio de ${name} - ${label}`} description={label}>
+  <main class="p-16 max-md:p-8 max-sm:p-4 print:p-0">
+
+    <Wrapper client:load delay={0}>
+      <Hero />
+    </Wrapper>
+    <Wrapper client:load delay={0.1}>
+      <About />
+    </Wrapper>
+    <Wrapper client:load delay={0.2}>
+      <Experience />
+    </Wrapper>
+    <Wrapper client:load delay={0.3}>
+      <Education />
+    </Wrapper>
+    <Wrapper client:load delay={0.4}>
+      <Projects />
+    </Wrapper>
+    <Wrapper client:load delay={0.5}>
+      <Skills />
+    </Wrapper>
+  </main>
+  <KeyboardManager client:load profiles={profiles} />
+  <ThemeApp client:load/>
+</Layout>
