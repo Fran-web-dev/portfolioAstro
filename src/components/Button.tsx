@@ -1,17 +1,17 @@
-import { useContext, type ReactNode } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider.tsx";
 
 interface ButtonProps {
-  children: ReactNode;
+  children: any;
   onClick: () => void;
   className?: string;
 }
 
 export const Button = ({children,onClick, className=""}:ButtonProps) => {
     const {theme} = useContext(ThemeContext);
-    const className = 'button-' + theme
+    const themeClassName = 'button-' + theme
     return (
-    <button className={className} onClick={onClick}>
+    <button className={`${className} ${themeClassName}`} onClick={onClick}>
         {children}
     </button>
   )

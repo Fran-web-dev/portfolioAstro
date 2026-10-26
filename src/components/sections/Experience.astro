@@ -24,7 +24,7 @@ function formatDate(date: string | null) {
 }
 ---
 
-<Section title="Experiencia laboral">
+<Section title="Experiencia y contribuciones" titleKey="sections.experience">
   <ul class="flex flex-col gap-8">
     {
       work.map(({ name, startDate, endDate,  summary, url }) => (
@@ -53,7 +53,7 @@ function formatDate(date: string | null) {
             </header>
             <footer>
               <p class="font-mono text-sm theme-text leading-6 text-neutral-600">
-                {summary}
+                <span data-i18n="experience.hoppscotch.summary">{summary}</span>
               </p>
             </footer>
           </article>

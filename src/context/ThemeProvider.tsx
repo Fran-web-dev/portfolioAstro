@@ -1,4 +1,4 @@
-import {createContext, useContext, useState, useEffect, type ReactNode} from "react"
+import {createContext, useContext, useState, useEffect} from "react"
 
 interface ThemeContextType {
   theme: "light" | "dark";
@@ -19,7 +19,7 @@ export const useTheme = (): ThemeContextType => {
   return context;
 }
 
-export const ThemeProvider = ({children}: {children: ReactNode}) => {
+export const ThemeProvider = ({children}: {children: any}) => {
 
     const [theme, setTheme] = useState<"light" | "dark">("dark");
     const [isAnimating, setIsAnimating] = useState(false);

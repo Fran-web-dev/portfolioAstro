@@ -5,8 +5,8 @@ import Section from "../Section.astro";
 const { summary } = basics;
 ---
 
-<Section title="Sobre mí">
+<Section title="Sobre mí" titleKey="sections.about">
   <p class="theme-text font-mono text-sm leading-6">
-    {summary}
+    <span data-i18n="about.summary">{summary}</span>
   </p>
 </Section>

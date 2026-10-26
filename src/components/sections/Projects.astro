@@ -4,7 +4,7 @@ import Section from "../Section.astro";
 import GitHub from "../../icons/GitHub.astro";
 ---
 
-<Section title="Proyectos">
+<Section title="Proyectos" titleKey="sections.projects">
   <ul class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
     {
       projects.map(
@@ -41,7 +41,7 @@ import GitHub from "../../icons/GitHub.astro";
                 </h3>
                   <img src={img} alt="image" class="p-2">
                 <p class="mb-1 font-mono text-xs theme-text leading-5 text-neutral-600">
-                  {description}
+                  <span data-i18n={`projects.${name === "JobTracker" ? "jobtracker" : name === "List Of Books" ? "listofbooks" : name === "Blog personal" ? "blog" : "iphone15"}.description`}>{description}</span>
                 </p>
               </header>
               <footer class="flex flex-wrap gap-1 text-xs">

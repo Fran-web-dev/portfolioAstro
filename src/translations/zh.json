@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "greeting": "你好，我是",
+    "location": "阿根廷，阿根廷省"
+  },
+  "sections": {
+    "about": "关于我",
+    "experience": "工作经历",
+    "education": "教育背景",
+    "projects": "项目",
+    "skills": "技能"
+  },
+  "about": {
+    "summary": "我是一名专注于打造现代、直观且响应迅速的网页界面的前端开发者。我使用 React、TypeScript 和 Tailwind CSS，注重良好的用户体验与易于维护的代码，并持续学习，构建解决实际问题的方案。"
+  },
+  "experience": {
+    "current": "至今",
+    "hoppscotch": {
+      "summary": "参与前端状态同步相关的问题修复，重点关注界面行为的一致性和代码的可维护性。"
+    }
+  },
+  "education": {
+    "degree": "软件开发技术文凭"
+  },
+  "projects": {
+    "jobtracker": {
+      "description": "用于管理招聘流程、整理候选人并集中跟踪职位空缺和面试的 Web 应用。"
+    },
+    "listofbooks": {
+      "description": "使用 React 构建的图书浏览与整理应用，支持按类别筛选，并通过动态计数方便浏览收藏。"
+    },
+    "blog": {
+      "description": "使用 React、Vite 和 TypeScript 构建的博客，集成 Markdown 编辑器、分类整理和文章互动功能。"
+    },
+    "iphone15": {
+      "description": "受 iPhone 15 Pro 启发的响应式宣传页面，从零构建界面结构、视觉设计与产品展示。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Franklin Villanueva。保留所有权利。"
+  }
+}

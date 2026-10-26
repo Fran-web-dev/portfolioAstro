@@ -1,9 +1,10 @@
 ---
 interface Props {
   title?: string;
+  titleKey?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleKey } = Astro.props;
 ---
 
 <section
@@ -12,7 +13,7 @@ const { title } = Astro.props;
   {
     title && (
       <h2 class="mb-2 text-2xl theme-text leading-8 font-bold text-neutral-900">
-        {title}
+        {titleKey ? <span data-i18n={titleKey}>{title}</span> : title}
       </h2>
     )
   }

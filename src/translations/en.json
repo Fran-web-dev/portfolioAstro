@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "location": "Argentina, Arginta"
+  },
+  "sections": {
+    "about": "About Me",
+    "experience": "Work Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "about": {
+    "summary": "Frontend developer focused on creating modern, intuitive, responsive web interfaces. I work with React, TypeScript, and Tailwind CSS, building projects that combine a good user experience with maintainable code. I enjoy learning and building solutions to real problems."
+  },
+  "experience": {
+    "current": "Present",
+    "hoppscotch": {
+      "summary": "Contributed to a frontend issue about state synchronization, focusing on consistent interface behavior and maintainable code."
+    }
+  },
+  "education": {
+    "degree": "Technical Degree in Software Development"
+  },
+  "projects": {
+    "jobtracker": {
+      "description": "Web application to manage selection processes, organize candidates, and track vacancies and interviews from a centralized interface"
+    },
+    "listofbooks": {
+      "description": "Web application developed with React that allows exploring and organizing books by genre. Includes category filters and dynamic counters to facilitate navigation through the collection."
+    },
+    "blog": {
+      "description": "Blog developed with React, Vite, and TypeScript that integrates a Markdown editor, organization by categories, and features to interact with publications."
+    },
+    "iphone15": {
+      "description": "Landing page inspired by the iPhone 15 Pro, focused on creating a modern and adaptable (responsive) visual experience. I developed the interface from scratch, working on the structure, design, and product presentation."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Franklin Villanueva"
+  }
+}

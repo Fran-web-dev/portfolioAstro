@@ -6,13 +6,13 @@
     "email": "franklinevillanueva4@gmail.com",
     "phone": "+503 0000-0000",
     "url": "https://fran-web-dev.github.io",
-    "summary": "Desarrollador Frontend apasionado por crear interfaces limpias, rápidas y accesibles. Trabajo con React, TypeScript, Astro y Tailwind CSS. Vivo en El Salvador.",
+    "summary": "Soy desarrollador frontend enfocado en crear interfaces web modernas, intuitivas y responsivas. Trabajo con React, TypeScript y Tailwind CSS, desarrollando proyectos que combinan una buena experiencia de usuario con código mantenible. Me interesa seguir aprendiendo, colaborar en proyectos de código abierto y construir soluciones que resuelvan problemas reales.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "San Salvador",
-      "countryCode": "SV",
-      "region": "El Salvador"
+      "city": "Argentina",
+      "countryCode": "Ar",
+      "region": "Argentina"
     },
     "profiles": [
       {
@@ -38,7 +38,7 @@
       "url": "https://github.com/hoppscotch/hoppscotch/issues/5754",
       "startDate": "01-01-2025",
       "endDate": null,
-      "summary": "Contribucion a issue frontend de codigo abierto enfocado en mejorar la seleccion de sincronizacion del estado  d   y  ld"
+      "summary": "Colaboración en un issue relacionado con la sincronización del estado en el frontend, con enfoque en la consistencia del comportamiento de la interfaz y la mantenibilidad del código."
     }
   ],
   "volunteer": [],
@@ -80,7 +80,7 @@
       "name": "JobTracker",
       "img":"../public/login.png",
       "isActive": true,
-      "description": "JobTracker es una aplicación web para gestionar flujos de trabajo de reclutamiento. Ayuda a los equipos a realizar un seguimiento de puestos, candidatos, solicitudes, entrevistas, procesos de contratación e informes desde una interfaz moderna basada en React.",
+      "description": "Aplicación web para gestionar procesos de selección, organizar candidatos y realizar un seguimiento de las vacantes y entrevistas desde una interfaz centralizada",
       "highlights": ["React", "JavaScript","Tailwind CSS", "MongoDB", "Prisma ORM"],
       "url": "https://talentflowatss.netlify.app/login",
       "github": "https://github.com/Fran-web-dev/jobTracker"
@@ -89,7 +89,7 @@
       "name": "List Of Books",
       "img":"../public/ListOfBooks.png",
       "isActive": false,
-      "description": "📚 Landing page inspirada en el iPhone 15 Pro, enfocada en crear una experiencia visual moderna y adaptable (responsive). Desarrollé la interfaz desde cero, trabajando en la estructura, el diseño y la presentación del producto.",
+      "description": "Aplicación web desarrollada con React que permite explorar y organizar libros por género. Incluye filtros por categoría y contadores dinámicos para facilitar la navegación por la colección.",
       "highlights": ["React", "JavaScript", "Tailwind CSS", "Jest JS"],
       "url": "https://listsofbooks.netlify.app/",
       "github": "https://github.com/Fran-web-dev/ListOfBooks"
@@ -98,7 +98,7 @@
       "name": "Blog personal",
       "img":"../public/Blog.png",
       "isActive": true,
-      "description": "Blog con editor Markdown, categorías, comentarios y corrección ortográfica integrada.",
+      "description": "Blog desarrollado con React, Vite y TypeScript que integra un editor Markdown, organización por categorías y funcionalidades para interactuar con las publicaciones.",
       "highlights": ["React", "Vite", "TypeScript"],
       "url": "https://bitacorablogpersonal.netlify.app/#/",
       "github": "https://github.com/Fran-web-dev/Blog"
@@ -107,7 +107,7 @@
       "name": "Iphone15",
       "img":"../public/Iphone15.png",
       "isActive": false,
-      "description": "Landing Page de Iphone 15 Pro, enfocada en crear una experiencia visual moderna y responsiva. Construí la interfaz desde cero, trabajando en la estructura, diseño y presentación del producto.",
+      "description": "📚 Landing page inspirada en el iPhone 15 Pro, enfocada en crear una experiencia visual moderna y adaptable (responsive). Desarrollé la interfaz desde cero, trabajando en la estructura, el diseño y la presentación del producto.",
       "highlights": ["React", "JavaScript","Tailwind CSS"],
       "url": "https://iphone15p.netlify.app/",
       "github": "https://github.com/Fran-web-dev/Iphone-15-pro"

@@ -1,11 +1,12 @@
 import { ThemeProvider } from "../context/ThemeProvider";
-import { ThemeToggle } from "./ThemeToggle";
 
-export const ThemeApp = () => {
+export const ThemeApp = ({ children }: { children: any }) => {
   return (
     <ThemeProvider>
-        <ThemeToggle/>
+      {children}
     </ThemeProvider>
-  )
-}
+  );
+};
+
+export default ThemeApp;
 

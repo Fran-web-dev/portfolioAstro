@@ -3,8 +3,9 @@
 
 @theme {
   --font-sans:
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+    "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   --font-mono:
     "Lucida Console", "Courier New", ui-monospace, Menlo, Monaco, Consolas,
     monospace;
@@ -12,8 +13,34 @@
 
 html {
   font-family: var(--font-sans);
-  font-size: 14px;
-  letter-spacing: -0.025rem;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.75;
 }
 
 :root {
@@ -50,11 +77,77 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Audiowide', sans-serif;
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-weight: 750;
+  letter-spacing: -0.045em;
 }
 
 figure {
   margin: 0;
+}
+
+.social-link {
+  border-color: #d1d5db;
+  background: #f9fafb;
+  color: #374151;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 8%);
+}
+
+.social-link:hover {
+  border-color: #9ca3af;
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 5px 14px rgb(15 23 42 / 14%);
+}
+
+.social-link svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.social-link.social-github:hover {
+  border-color: #374151;
+  background: #1f2937;
+  color: white;
+}
+
+.social-link.social-linkedin:hover {
+  border-color: #0a66c2;
+  background: #0a66c2;
+  color: white;
+}
+
+.social-link.social-x:hover {
+  border-color: #111827;
+  background: #111827;
+  color: white;
+}
+
+html[data-theme="dark"] .social-link {
+  border-color: #525352;
+  background: #333433;
+  color: #e5e7eb;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 24%);
+}
+
+html[data-theme="dark"] .social-link:hover {
+  border-color: #737573;
+  background: #414341;
+  color: #fff;
+  box-shadow: 0 5px 14px rgb(0 0 0 / 30%);
+}
+
+html[data-theme="dark"] .social-link.social-github:hover,
+html[data-theme="dark"] .social-link.social-x:hover {
+  border-color: #f9fafb;
+  background: #f9fafb;
+  color: #111827;
+}
+
+html[data-theme="dark"] .social-link.social-linkedin:hover {
+  border-color: #0a66c2;
+  background: #0a66c2;
+  color: white;
 }
 
 kbd {
@@ -125,6 +218,142 @@ html[data-theme="dark"] .border-slate-300 {
 
 .theme-muted {
   color: var(--muted);
+}
+
+/* Keyboard palette follows the theme selected by ThemeToggle. */
+.keyboard-hint {
+  border-color: #e5e7eb;
+  background: rgb(255 255 255 / 88%);
+  color: #6b7280;
+}
+
+.keyboard-kbd {
+  border-color: #e5e7eb;
+  background: #f9fafb;
+  color: #4b5563;
+}
+
+.keyboard-overlay {
+  background: rgb(17 24 39 / 40%);
+}
+
+.keyboard-panel {
+  border-color: #e5e7eb;
+  background: #fff;
+  color: #111827;
+}
+
+.keyboard-search,
+.keyboard-footer {
+  border-color: #f3f4f6;
+}
+
+.keyboard-footer {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.keyboard-input {
+  background: transparent;
+  color: #1f2937;
+}
+
+.keyboard-input::placeholder,
+.keyboard-muted {
+  color: #9ca3af;
+}
+
+.keyboard-text {
+  color: #1f2937;
+}
+
+.keyboard-action {
+  color: #6b7280;
+}
+
+.keyboard-action:hover,
+.keyboard-action.is-active {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.keyboard-icon {
+  border-color: #f3f4f6;
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.keyboard-icon.is-active {
+  border-color: #e5e7eb;
+  background: #fff;
+  color: #111827;
+}
+
+html[data-theme="dark"] .keyboard-hint {
+  border-color: #292a29;
+  background: rgb(41 42 41 / 88%);
+  color: #9ca3af;
+}
+
+html[data-theme="dark"] .keyboard-kbd {
+  border-color: #404140;
+  background: #292a29;
+  color: #d1d5db;
+}
+
+html[data-theme="dark"] .keyboard-overlay {
+  background: rgb(0 0 0 / 60%);
+}
+
+html[data-theme="dark"] .keyboard-panel {
+  border-color: #404140;
+  background: #292a29;
+  color: #f9fafb;
+}
+
+html[data-theme="dark"] .keyboard-search,
+html[data-theme="dark"] .keyboard-footer {
+  border-color: #404140;
+}
+
+html[data-theme="dark"] .keyboard-footer {
+  background: #202120;
+  color: #9ca3af;
+}
+
+html[data-theme="dark"] .keyboard-input {
+  color: #fff;
+}
+
+html[data-theme="dark"] .keyboard-input::placeholder,
+html[data-theme="dark"] .keyboard-muted {
+  color: #6b7280;
+}
+
+html[data-theme="dark"] .keyboard-text {
+  color: #f9fafb;
+}
+
+html[data-theme="dark"] .keyboard-action {
+  color: #9ca3af;
+}
+
+html[data-theme="dark"] .keyboard-action:hover,
+html[data-theme="dark"] .keyboard-action.is-active {
+  background: #3f403f;
+  color: #fff;
+}
+
+html[data-theme="dark"] .keyboard-icon {
+  border-color: #404140;
+  background: #202120;
+  color: #9ca3af;
+}
+
+html[data-theme="dark"] .keyboard-icon.is-active {
+  border-color: #525352;
+  background: #4b4c4b;
+  color: #fff;
 }
 
 @keyframes curtain {

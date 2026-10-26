@@ -1,8 +1,7 @@
-import type { ReactNode } from "react"
 import { motion } from "motion/react"
 
 interface WrapperHoverProp {
-    children: ReactNode
+    children: any
 }
 
 export const WrapperHover = ({ children }: WrapperHoverProp) => {

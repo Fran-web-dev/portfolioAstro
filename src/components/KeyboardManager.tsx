@@ -46,7 +46,7 @@ const NETWORK_KEYS: Record<string, string> = {
 
 function Kbd({ children }: { children: React.ReactNode }) {
   return (
-    <kbd className="inline-flex h-5 min-w-5 items-center justify-center rounded border border-neutral-200 dark:border-[#292a29] bg-neutral-50 dark:bg-[#292a29] px-1.5 font-mono text-[10px] font-medium text-neutral-600 dark:text-gray-300">
+    <kbd className="keyboard-kbd inline-flex h-5 min-w-5 items-center justify-center rounded border px-1.5 font-mono text-[10px] font-medium">
       {children}
     </kbd>
   );
@@ -150,7 +150,7 @@ export default function KeyboardManager({ profiles }: Props) {
 
   return (
     <>
-      <footer className="no-print fixed bottom-0 w-full border-t border-neutral-200 dark:border-[#292a29] bg-white/80 dark:bg-[#292a29]/80 py-2 text-center text-xs text-neutral-500 dark:text-gray-400 backdrop-blur-sm">
+      <footer className="keyboard-hint no-print fixed bottom-0 w-full border-t py-2 text-center text-xs backdrop-blur-sm">
         Pulsa <Kbd>{modKey}</Kbd> + <Kbd>K</Kbd> para abrir la paleta de
         comandos.
       </footer>
@@ -162,7 +162,7 @@ export default function KeyboardManager({ profiles }: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="no-print fixed inset-0 z-50 flex items-start justify-center bg-neutral-900/40 dark:bg-black/60 px-4 pt-[15vh] backdrop-blur-[2px]"
+            className="keyboard-overlay no-print fixed inset-0 z-50 flex items-start justify-center px-4 pt-[15vh] backdrop-blur-[2px]"
             onClick={() => setOpen(false)}
           >
             <motion.div
@@ -170,12 +170,12 @@ export default function KeyboardManager({ profiles }: Props) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
               transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-              className="w-full max-w-xl overflow-hidden rounded-2xl border border-neutral-200 dark:border-[#292a29] bg-white dark:bg-gray-800 shadow-2xl shadow-neutral-900/10"
+              className="keyboard-panel w-full max-w-xl overflow-hidden rounded-2xl border shadow-2xl"
               onClick={(e) => e.stopPropagation()}
               onKeyDown={onPaletteKeyDown}
             >
-            <div className="flex items-center gap-3 border-b border-neutral-100 dark:border-[#292a29] px-4">
-              <LuSearch className="size-4 shrink-0 text-neutral-400 dark:text-gray-500" />
+            <div className="keyboard-search flex items-center gap-3 border-b px-4">
+              <LuSearch className="keyboard-muted size-4 shrink-0" />
               <input
                 ref={inputRef}
                 type="text"
@@ -185,14 +185,14 @@ export default function KeyboardManager({ profiles }: Props) {
                   setSelected(0);
                 }}
                 placeholder="Buscar comando…"
-                className="w-full py-3.5 text-sm text-neutral-800 dark:text-white outline-none placeholder:text-neutral-400 dark:placeholder:text-gray-500"
+                className="keyboard-input w-full py-3.5 text-sm outline-none"
               />
               <Kbd>Esc</Kbd>
             </div>
 
             <ul className="max-h-72 overflow-y-auto p-2">
               {filtered.length === 0 && (
-                <li className="px-3 py-6 text-center text-sm text-neutral-800 dark:text-white">
+                <li className="keyboard-text px-3 py-6 text-center text-sm">
                   Sin resultados
                 </li>
               )}
@@ -205,18 +205,18 @@ export default function KeyboardManager({ profiles }: Props) {
                       type="button"
                       onClick={() => runAction(action)}
                       onMouseEnter={() => setSelected(i)}
-                      className={`flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm transition-colors ${
+                      className={`keyboard-action flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm transition-colors ${
                         active
-                          ? "bg-neutral-50 dark:bg-gray-700 text-neutral-900 dark:text-white"
-                          : "text-neutral-500 dark:text-gray-400"
+                          ? "is-active"
+                          : ""
                       }`}
                     >
                       <span className="flex items-center gap-3">
                         <span
-                          className={`flex size-7 items-center justify-center rounded-md border ${
+                          className={`keyboard-icon flex size-7 items-center justify-center rounded-md border ${
                             active
-                              ? "border-neutral-200 dark:border-[#292a29] bg-white dark:bg-gray-600 text-neutral-900 dark:text-white"
-                              : "border-neutral-100 dark:border-gray-700 bg-neutral-100 dark:bg-gray-800 text-neutral-500 dark:text-gray-400"
+                              ? "is-active"
+                              : ""
                           }`}
                         >
                           <Icon className="size-3.5" />
@@ -236,7 +236,7 @@ export default function KeyboardManager({ profiles }: Props) {
               })}
             </ul>
 
-            <div className="flex items-center justify-between border-t border-neutral-100 dark:border-[#292a29] bg-neutral-50 dark:bg-gray-900 px-4 py-2.5 text-[11px] text-neutral-400 dark:text-gray-500">
+            <div className="keyboard-footer flex items-center justify-between border-t px-4 py-2.5 text-[11px]">
               <span className="flex items-center gap-1.5">
                 <Kbd>
                   <LuArrowUp className="size-3" />

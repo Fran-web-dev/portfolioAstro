@@ -27,19 +27,19 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   <div class="flex flex-row items-center justify-between gap-4">
     <div class="flex flex-col gap-2 pr-8">
       <h1 class="text-3xl font-bold text">
-       Hola, Soy <span class="gradient-text text-2xl">{name}</span> 🤚
+       <span data-i18n="hero.greeting">Hola, soy</span> <span class="gradient-text text-2xl">{name}</span> 🤚
       </h1>
       <h2 class="font-mono text-lg font-medium text-balance theme-text">
         {label}
       </h2>
       <span class="flex items-center gap-1 font-mono text-xs tracking-tight theme-text">
         <WorldMap />
-        {city}, {region}
+        <span data-i18n="hero.location">{city}, {region}</span>
       </span>
       <footer class="mt-1 hidden font-mono text-xs text-neutral-500 print:block">
         {printInfo}
       </footer>
-      <footer class="mt-1 flex gap-1 print:hidden">
+      <footer class="mt-2 flex gap-2 print:hidden">
         {
           email && (
             <a
@@ -47,7 +47,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
               title={`Enviar un correo electrónico a ${name} al correo ${email}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+              class="social-link inline-flex size-10 items-center justify-center rounded-xl border transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
             >
               <Mail />
             </a>
@@ -58,7 +58,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
             <a
               href={`tel:${phone}`}
               title={`Llamar por teléfono a ${name} al número ${phone}`}
-              class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+              class="social-link inline-flex size-10 items-center justify-center rounded-xl border transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
             >
               <Phone />
             </a>
@@ -74,7 +74,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
                 title={`Visitar el perfil de ${name} en ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 text-neutral-600 transition-all hover:bg-neutral-100 hover:text-neutral-900"
+                class={`social-link social-${network.toLowerCase()} inline-flex size-10 items-center justify-center rounded-xl border transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2`}
               >
                 <Icon />
               </a>

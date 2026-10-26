@@ -1,8 +1,7 @@
-import type { ReactNode } from "react"
 import { motion } from "motion/react"
 
 interface ScrollWrapperProps {
-    children: ReactNode
+    children: any
     delay?: number
 }
 

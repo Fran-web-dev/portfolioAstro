@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggle";
+import LanguageToggle from "../components/LanguageToggle";
 
 interface Props {
   title: string;
@@ -22,9 +24,11 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <ThemeToggle client:load />
+    <LanguageToggle client:load />
     <slot />
     <Footer />
   </body>
