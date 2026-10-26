@@ -1,46 +1,73 @@
-# Astro Starter Kit: Basics
+# Franklin Villanueva — Portfolio
 
-```sh
-pnpm create astro@latest -- --template basics
+A personal developer portfolio built with Astro, React, and Tailwind CSS. It presents Franklin's profile, experience, education, projects, and technical skills in a responsive single-page layout.
+
+## Features
+
+- Spanish, English, and Chinese language selector. The selected language is saved in the browser.
+- Light and dark theme toggle.
+- Keyboard command palette (`Ctrl/Cmd + K`) with quick actions for printing and opening social profiles.
+- Responsive project cards with links to live demos and source repositories.
+- Contact and social profile links.
+- Print-friendly styles.
+
+## Tech stack
+
+- [Astro](https://astro.build/) with the React integration
+- [React](https://react.dev/) for interactive controls and components
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Motion](https://motion.dev/) for interface animations
+- [React Icons](https://react-icons.github.io/react-icons/) for command palette icons
+
+## Requirements
+
+- Node.js `>=22.12.0`
+- pnpm
+
+## Getting started
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Astro starts the local development server at [http://localhost:4321](http://localhost:4321).
 
-## 🚀 Project Structure
+## Available commands
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the development server. |
+| `pnpm build` | Build the production site into `dist/`. |
+| `pnpm preview` | Preview the production build locally. |
+| `pnpm astro -- --help` | Show Astro CLI help. |
+
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+.
+├── cv.json                    # Portfolio content and profile data
+├── public/                    # Static images and favicon
+└── src/
+    ├── components/            # Page sections and interactive React components
+    ├── context/               # Theme state
+    ├── layouts/               # Shared page layout and metadata
+    ├── pages/                 # Astro routes
+    ├── styles/                # Global styles and theme styling
+    └── translations/          # Spanish, English, and Chinese copy
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Updating the portfolio
 
-## 🧞 Commands
+- Edit `cv.json` to update profile details, work history, education, skills, and project metadata.
+- Edit `src/translations/es.json`, `src/translations/en.json`, or `src/translations/zh.json` to update translated interface copy and project descriptions. Keep the same keys in each file so the language selector can find every translation.
+- Add or replace project images in `public/` and update the corresponding image paths in `cv.json`.
 
-All commands are run from the root of the project, from a terminal:
+## Production build
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```bash
+pnpm build
+pnpm preview
+```
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The static site output is written to `dist/`.
