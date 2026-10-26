@@ -78,7 +78,7 @@
   "projects": [
     {
       "name": "JobTracker",
-      "img":"../public/login.png",
+      "img":"/login.png",
       "isActive": true,
       "description": "Aplicación web para gestionar procesos de selección, organizar candidatos y realizar un seguimiento de las vacantes y entrevistas desde una interfaz centralizada",
       "highlights": ["React", "JavaScript","Tailwind CSS", "MongoDB", "Prisma ORM"],
@@ -87,7 +87,7 @@
     },
     {
       "name": "List Of Books",
-      "img":"../public/ListOfBooks.png",
+      "img":"/ListOfBooks.png",
       "isActive": false,
       "description": "Aplicación web desarrollada con React que permite explorar y organizar libros por género. Incluye filtros por categoría y contadores dinámicos para facilitar la navegación por la colección.",
       "highlights": ["React", "JavaScript", "Tailwind CSS", "Jest JS"],
@@ -96,7 +96,7 @@
     },
     {
       "name": "Blog personal",
-      "img":"../public/Blog.png",
+      "img":"/blog.png",
       "isActive": true,
       "description": "Blog desarrollado con React, Vite y TypeScript que integra un editor Markdown, organización por categorías y funcionalidades para interactuar con las publicaciones.",
       "highlights": ["React", "Vite", "TypeScript"],
@@ -105,7 +105,7 @@
     },
     {
       "name": "Iphone15",
-      "img":"../public/Iphone15.png",
+      "img":"/Iphone15.png",
       "isActive": false,
       "description": "📚 Landing page inspirada en el iPhone 15 Pro, enfocada en crear una experiencia visual moderna y adaptable (responsive). Desarrollé la interfaz desde cero, trabajando en la estructura, el diseño y la presentación del producto.",
       "highlights": ["React", "JavaScript","Tailwind CSS"],

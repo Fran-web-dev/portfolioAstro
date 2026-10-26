@@ -39,7 +39,7 @@ import GitHub from "../../icons/GitHub.astro";
                     </a>
                   )}
                 </h3>
-                  <img src={img} alt="image" class="p-2">
+                  <img src={img} alt={`Vista previa de ${name}`} loading="lazy" class="w-full aspect-video rounded-md object-cover p-2">
                 <p class="mb-1 font-mono text-xs theme-text leading-5 text-neutral-600">
                   <span data-i18n={`projects.${name === "JobTracker" ? "jobtracker" : name === "List Of Books" ? "listofbooks" : name === "Blog personal" ? "blog" : "iphone15"}.description`}>{description}</span>
                 </p>
